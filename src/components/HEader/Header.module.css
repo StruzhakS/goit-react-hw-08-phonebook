@@ -1,8 +1,9 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 0 20px;
   margin-bottom: 50px;
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 
 .link {
@@ -20,6 +21,7 @@
 
 .link:hover {
   background-color: rgba(255, 42, 27, 0.812);
+  color: white;
 }
 .authData {
   display: flex;
@@ -72,4 +74,5 @@
 }
 .linkAuth:hover {
   background-color: rgba(255, 42, 27, 0.812);
+  color: white;
 }
