@@ -39,7 +39,7 @@
   gap: 25px;
 }
 .title {
-  text-align: center;
+  text-align: end;
 }
 
 .logoutBtn {

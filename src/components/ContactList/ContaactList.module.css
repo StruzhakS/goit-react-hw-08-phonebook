@@ -1,6 +1,6 @@
 .deleteButton {
-  background-color: rgba(253, 146, 139, 0.53);
-  width: 200px;
+  background-color: rgba(246, 56, 43, 0.53);
+  width: 140px;
   height: 40px;
   font-style: 18px;
   border-radius: 10px;
@@ -9,7 +9,7 @@
   cursor: pointer;
 }
 .deleteButton:hover {
-  background-color: rgba(247, 121, 112, 0.655);
+  background-color: rgba(251, 49, 34, 0.853);
 }
 .contactList {
   width: 600px;

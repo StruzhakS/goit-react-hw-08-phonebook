@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
 import s from './ContaactList.module.css';
-// import { deleteContactAction } from 'strore/contacts/contactSlice';
 import { deleteContactOperation } from 'strore/contacts/Operations';
 import { RotatingLines } from 'react-loader-spinner';
 
@@ -41,6 +40,7 @@ const ContactList = () => {
           ))}
         </ul>
       )}
+
       <p className={s.totalContacts}>Total contacts {contacts.length}</p>
     </>
   );

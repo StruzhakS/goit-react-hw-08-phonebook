@@ -59,19 +59,3 @@ export const contactSlice = createSlice({
 export const contactReducer = contactSlice.reducer;
 export const { addContactAction, deleteContactAction, filterContactAction } =
   contactSlice.actions;
-
-// .addCase(
-//       (addContactOperation.pending,
-//       state => {
-//         state.isLoading = true;
-//       })
-//     )
-//     .addCase(addContactOperation.fulfilled, (state, { payload }) => {
-//       state.isLoading = false;
-//       state.error = null;
-//       state.contacts = payload;
-//     })
-//     .addCase(addContactOperation.rejected, (state, { payload }) => {
-//       state.isLoading = false;
-//       state.error = payload;
-//     });

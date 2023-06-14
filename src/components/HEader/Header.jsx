@@ -29,7 +29,7 @@ export const Header = () => {
       <h2 className={s.title}>Phone Book</h2>
       {isAuth ? (
         <div className={s.authData}>
-          <h2 className={s.title}>Hello, {userName} </h2>
+          <h3 className={s.title}>Hello, {userName} </h3>
           <button
             className={s.logoutBtn}
             onClick={() => {
