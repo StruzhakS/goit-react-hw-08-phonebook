@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { logOutAction } from 'strore/Auth/AuthSlice';
 import s from './Header.module.css';
+import clsx from 'clsx';
 
 export const Header = () => {
   const { isAuth } = useSelector(state => state.auth);
@@ -18,11 +19,14 @@ export const Header = () => {
   return (
     <div className={s.header}>
       <div className={s.homeBox}>
-        <NavLink className={s.link} to="/">
+        <NavLink
+          className={({ isActive }) => clsx(s.link, isActive && s.active)}
+          to="/"
+        >
           Home
         </NavLink>
-        <h2>Phone Book</h2>
       </div>
+      <h2 className={s.title}>Phone Book</h2>
       {isAuth ? (
         <div className={s.authData}>
           <h2 className={s.title}>Hello, {userName} </h2>
@@ -37,10 +41,16 @@ export const Header = () => {
         </div>
       ) : (
         <div className={s.authorization}>
-          <NavLink className={s.linkAuth} to="/register">
+          <NavLink
+            className={({ isActive }) => clsx(s.link, isActive && s.active)}
+            to="/register"
+          >
             Registration
           </NavLink>
-          <NavLink className={s.linkAuth} to="/login">
+          <NavLink
+            className={({ isActive }) => clsx(s.link, isActive && s.active)}
+            to="/login"
+          >
             Log In
           </NavLink>
         </div>

@@ -1,6 +1,6 @@
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0 20px;
   margin-bottom: 50px;
   box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
@@ -35,7 +35,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 650px;
+  width: 300px;
   gap: 25px;
 }
 .title {
@@ -55,9 +55,13 @@
 .logoutBtn:hover {
   background-color: rgba(255, 24, 8, 0.655);
 }
+.title {
+  width: 300px;
+}
 .authorization {
   display: flex;
   gap: 25px;
+  width: 300px;
   align-items: center;
   text-align: center;
 }
@@ -74,5 +78,10 @@
 }
 .linkAuth:hover {
   background-color: rgba(255, 42, 27, 0.812);
+  color: white;
+}
+
+.active {
+  background-color: rgba(192, 187, 45, 0.568);
   color: white;
 }
