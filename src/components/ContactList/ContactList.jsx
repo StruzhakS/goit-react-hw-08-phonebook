@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import s from './ContaactList.module.css';
 import { deleteContactOperation } from 'strore/contacts/Operations';
 import { RotatingLines } from 'react-loader-spinner';
-
+import removCont from '../../image/Remove_User-80_icon-icons.com_57283.svg';
 const ContactList = () => {
   const { contacts, filter, isLoading } = useSelector(state => state.contacts);
   const dispatch = useDispatch();
@@ -34,7 +34,7 @@ const ContactList = () => {
                 type="button"
                 onClick={e => deleteContact(contact.id)}
               >
-                Delete
+                <img src={removCont} alt="" width={30} />
               </button>
             </li>
           ))}

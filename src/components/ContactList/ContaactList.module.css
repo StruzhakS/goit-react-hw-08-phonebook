@@ -1,9 +1,9 @@
 .deleteButton {
   background-color: rgba(246, 56, 43, 0.53);
-  width: 140px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   font-style: 18px;
-  border-radius: 10px;
+  border-radius: 50%;
   border-color: transparent;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   cursor: pointer;
@@ -34,7 +34,7 @@
   display: flex;
   flex-wrap: wrap;
   padding: 15px;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 600px;
   /* height: 200px; */
   /* border: 1px dotted rgba(250, 128, 114, 0.703); */

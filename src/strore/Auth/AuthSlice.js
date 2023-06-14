@@ -17,10 +17,6 @@ export const authSlice = createSlice({
   },
 
   reducers: {
-    // filterContactAction: (state, action) => ({
-    //   ...state,
-    //   filter: action.payload,
-    // }),
     logOutAction: state => {
       state.error = null;
       state.isLoading = false;
@@ -84,5 +80,3 @@ export const authSlice = createSlice({
 
 export const authReducer = authSlice.reducer;
 export const { logOutAction } = authSlice.actions;
-// export const { addContactAction, deleteContactAction, filterContactAction } =
-//   contactSlice.actions;
