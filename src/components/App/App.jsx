@@ -2,17 +2,42 @@ import DoForm from '../DoForm/DoForm';
 import ContactList from '../ContactList/ContactList';
 import Filter from 'components/FilterCOntacts/Filtercontacts';
 import s from './style.module.css';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { Header } from 'components/HEader/Header';
+import { useDebugValue, useEffect, useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import AuthPage from 'Page/AuthPage';
+import LoginPage from 'Page/LoginPage';
+
+import ContactForm from 'components/ContactForm/ContactForm';
+import { getRefreshUser } from 'strore/contacts/Operations';
 
 function App() {
-  const { contacts } = useSelector(state => state.contacts);
+  const { isAuth } = useSelector(state => state.auth);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getRefreshUser());
+  }, [dispatch]);
   return (
     <>
-      <h1 className={s.title}>Phone Book</h1>
-      <DoForm />
-
-      {contacts.length > 1 && <Filter />}
-      <ContactList />
+      <Header />
+      <Routes>
+        <Route path="/register" element={<AuthPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route
+          path="/"
+          element={
+            isAuth ? (
+              <ContactForm />
+            ) : (
+              <h1>
+                Увійдіть або зареєструйтесь для того, щоб користуватись
+                телефонною книжкою
+              </h1>
+            )
+          }
+        />
+      </Routes>
     </>
   );
 }

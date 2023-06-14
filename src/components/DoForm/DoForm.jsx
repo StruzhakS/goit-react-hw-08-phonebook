@@ -15,7 +15,7 @@ function DoForm() {
   const [number, setNumber] = useState('');
   const { contacts } = useSelector(state => state.contacts);
   const addContact = contact => {
-    contacts.some(el => el.Name.includes(contact.Name))
+    contacts.some(el => el.name.includes(contact.name))
       ? alert('This contact is already in the list ')
       : dispatch(addContactOperation(contact));
   };
@@ -28,8 +28,8 @@ function DoForm() {
   const handleSubmit = e => {
     e.preventDefault();
     const contact = {
-      Name: name,
-      Number: number,
+      name: name,
+      number: number,
       id: nanoid(),
     };
     addContact(contact);

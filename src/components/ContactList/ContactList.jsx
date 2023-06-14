@@ -13,7 +13,7 @@ const ContactList = () => {
   };
 
   const filteredContacts = contacts.filter(el =>
-    el.Name.toLowerCase().includes(filter.toLowerCase())
+    el.name.toLowerCase().includes(filter.toLowerCase())
   );
   return (
     <>
@@ -29,7 +29,7 @@ const ContactList = () => {
         <ul className={s.contactList}>
           {filteredContacts.map(contact => (
             <li className={s.listItem} key={contact.id}>
-              <p className={s.name}>{contact.Name}: </p> <p>{contact.Number}</p>
+              <p className={s.name}>{contact.name}: </p> <p>{contact.number}</p>
               <button
                 className={s.deleteButton}
                 type="button"
