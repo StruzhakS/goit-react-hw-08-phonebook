@@ -1,0 +1,75 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.link {
+  display: block;
+  text-align: unset;
+  text-decoration: none;
+  background-color: rgba(250, 70, 57, 0.53);
+  width: 100px;
+  height: 25px;
+  border-radius: 10px;
+  border-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+
+.link:hover {
+  background-color: rgba(255, 42, 27, 0.812);
+}
+.authData {
+  display: flex;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.homeBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 650px;
+  gap: 25px;
+}
+.title {
+  text-align: center;
+}
+
+.logoutBtn {
+  background-color: rgba(250, 70, 57, 0.53);
+  width: 80px;
+  height: 40px;
+  font-style: 18px;
+  border-radius: 10px;
+  border-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+.logoutBtn:hover {
+  background-color: rgba(255, 24, 8, 0.655);
+}
+.authorization {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  text-align: center;
+}
+.linkAuth {
+  text-align: unset;
+  text-decoration: none;
+  background-color: rgba(250, 70, 57, 0.53);
+  width: 100px;
+  height: 25px;
+  border-radius: 10px;
+  border-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+.linkAuth:hover {
+  background-color: rgba(255, 42, 27, 0.812);
+}

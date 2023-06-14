@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { userLogin } from 'strore/contacts/Operations';
+import s from './AuthPage.module.css';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -22,10 +23,11 @@ const LoginPage = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={s.form} onSubmit={handleSubmit}>
       <label>
-        <p>Please enter email</p>
+        <p className={s.nameInput}>Please enter email</p>
         <input
+          className={s.input}
           onChange={handleEmail}
           type="email"
           name="email"
@@ -34,8 +36,9 @@ const LoginPage = () => {
         />
       </label>
       <label>
-        <p>Please enter password</p>
+        <p className={s.nameInput}>Please enter password</p>
         <input
+          className={s.input}
           onChange={handlePass}
           type="password"
           name="password"
@@ -43,7 +46,9 @@ const LoginPage = () => {
           placeholder="********"
         />
       </label>
-      <button type="submit">Login</button>
+      <button className={s.addButton} type="submit">
+        Login
+      </button>
     </form>
   );
 };

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from 'strore/contacts/Operations';
-
+import s from './AuthPage.module.css';
 const AuthPage = () => {
   const [userName, setUserName] = useState('');
   const [email, setEmail] = useState('');
@@ -26,10 +26,11 @@ const AuthPage = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className={s.form} onSubmit={handleSubmit}>
       <label>
-        <p>Please enter name</p>
+        <p className={s.nameInput}>Please enter name</p>
         <input
+          className={s.input}
           onChange={handleName}
           type="text"
           name="name"
@@ -38,8 +39,9 @@ const AuthPage = () => {
         />
       </label>
       <label>
-        <p>Please enter email</p>
+        <p className={s.nameInput}>Please enter email</p>
         <input
+          className={s.input}
           onChange={handleEmail}
           type="email"
           name="email"
@@ -48,8 +50,9 @@ const AuthPage = () => {
         />
       </label>
       <label>
-        <p>Please enter password</p>
+        <p className={s.nameInput}>Please enter password</p>
         <input
+          className={s.input}
           onChange={handlePass}
           type="password"
           name="password"
@@ -57,7 +60,9 @@ const AuthPage = () => {
           placeholder="********"
         />
       </label>
-      <button type="submit">Registration</button>
+      <button className={s.addButton} type="submit">
+        Registration
+      </button>
     </form>
   );
 };

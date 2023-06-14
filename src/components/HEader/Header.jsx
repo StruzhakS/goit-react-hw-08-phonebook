@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { logOutAction } from 'strore/Auth/AuthSlice';
+import s from './Header.module.css';
 
 export const Header = () => {
   const { isAuth } = useSelector(state => state.auth);
@@ -15,17 +16,18 @@ export const Header = () => {
     }
   }, [isAuth, navigate]);
   return (
-    <div>
-      <div>
-        <NavLink style={{ textDecoration: 'none' }} to="/">
+    <div className={s.header}>
+      <div className={s.homeBox}>
+        <NavLink className={s.link} to="/">
           Home
         </NavLink>
         <h2>Phone Book</h2>
       </div>
       {isAuth ? (
-        <div>
-          <h2>Hello, {userName} </h2>
+        <div className={s.authData}>
+          <h2 className={s.title}>Hello, {userName} </h2>
           <button
+            className={s.logoutBtn}
             onClick={() => {
               dispatch(logOutAction());
             }}
@@ -34,11 +36,11 @@ export const Header = () => {
           </button>
         </div>
       ) : (
-        <div>
-          <NavLink style={{ textDecoration: 'none' }} to="/register">
+        <div className={s.authorization}>
+          <NavLink className={s.linkAuth} to="/register">
             Registration
           </NavLink>
-          <NavLink style={{ textDecoration: 'none' }} to="/login">
+          <NavLink className={s.linkAuth} to="/login">
             Log In
           </NavLink>
         </div>
