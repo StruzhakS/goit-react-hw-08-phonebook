@@ -1,10 +1,6 @@
-import DoForm from '../DoForm/DoForm';
-import ContactList from '../ContactList/ContactList';
-import Filter from 'components/FilterCOntacts/Filtercontacts';
-import s from './style.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { Header } from 'components/HEader/Header';
-import { useDebugValue, useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import AuthPage from 'Page/AuthPage';
 import LoginPage from 'Page/LoginPage';
